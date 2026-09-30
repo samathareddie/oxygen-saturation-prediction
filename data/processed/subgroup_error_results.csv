@@ -1,0 +1,10 @@
+Model,Change Group,Rows,MAE,RMSE
+Persistence Baseline,Stable (<1 point),1559,0.0009621552277100705,0.02193348157167565
+Persistence Baseline,Moderate (1 to <3 points),144,1.1666666666666667,1.2289901003127188
+Persistence Baseline,Large (3+ points),45,6.6,10.091250335480401
+Ridge - SpO2 History,Stable (<1 point),1559,0.2280738832861865,0.2839329857168542
+Ridge - SpO2 History,Moderate (1 to <3 points),144,1.0189219578935151,1.3607768969392462
+Ridge - SpO2 History,Large (3+ points),45,5.170357806870135,7.964274908856026
+Gradient Boosting - SpO2 + HR,Stable (<1 point),1559,0.2505272929180951,0.3921857156195065
+Gradient Boosting - SpO2 + HR,Moderate (1 to <3 points),144,1.047629391766411,1.3246410415736214
+Gradient Boosting - SpO2 + HR,Large (3+ points),45,5.1195944739849955,7.729437266685933

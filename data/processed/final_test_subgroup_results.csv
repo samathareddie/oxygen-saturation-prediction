@@ -1,0 +1,7 @@
+Model,Change Group,Rows,MAE,RMSE
+Persistence Baseline,Stable (<1 point),1352,0.005547337278106509,0.052665630529342894
+Tuned Gradient Boosting + HR,Stable (<1 point),1352,0.277923415938213,0.3653331968119032
+Persistence Baseline,Moderate (1 to <3 points),358,1.1466480446927374,1.2002676610242229
+Tuned Gradient Boosting + HR,Moderate (1 to <3 points),358,1.005843890642548,1.1863423797517099
+Persistence Baseline,Large (3+ points),40,5.9375,7.1680715677230795
+Tuned Gradient Boosting + HR,Large (3+ points),40,5.120222983439649,6.633189654121324

@@ -1,0 +1,47 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Raw downloaded data
+data/raw/
+
+# Temporary/generated intermediate files
+data/processed/failed_cases_*.csv
+data/processed/multi_patient_test*.csv
+
+# Intermediate / patient-level processed datasets
+data/processed/case_1_1min.csv
+data/processed/case_1_features.csv
+data/processed/multi_patient_50*.csv
+data/processed/multi_patient_test*.csv
+data/processed/failed_cases_*.csv
+
+# Row-level prediction output
+data/processed/final_test_predictions.csv

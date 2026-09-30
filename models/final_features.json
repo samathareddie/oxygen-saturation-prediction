@@ -1,0 +1,13 @@
+[
+    "spo2",
+    "spo2_lag_1",
+    "spo2_lag_3",
+    "spo2_lag_5",
+    "spo2_change_1min",
+    "spo2_change_3min",
+    "spo2_rolling_mean_5",
+    "spo2_rolling_std_5",
+    "heart_rate",
+    "heart_rate_lag_1",
+    "heart_rate_rolling_mean_5"
+]
