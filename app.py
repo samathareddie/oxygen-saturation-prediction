@@ -272,12 +272,13 @@ st.header("3. Generate Forecast")
 if st.button(
     "Predict SpO₂ in 5 Minutes",
     type="primary",
-    use_container_width=True
+    width="stretch"
 ):
 
     prediction = model.predict(
         input_df
     )[0]
+
     # Keep displayed SpO₂ within the physiological scale
     prediction = float(
     np.clip(prediction, 0, 100)
@@ -370,7 +371,7 @@ if st.button(
 
         st.dataframe(
             input_df,
-            use_container_width=True
+            width="stretch"
         )
 
 

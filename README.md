@@ -158,3 +158,80 @@ oxygen-saturation-prediction/
 ├── requirements.txt
 └── README.md
 ```
+
+
+## Run the Application
+
+Clone the repository:
+
+```bash
+git clone https://github.com/samathareddie/oxygen-saturation-prediction.git
+cd oxygen-saturation-prediction
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate it on Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+Install the required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+---
+
+## Model Deployment
+
+The final tuned Gradient Boosting model is serialized using Joblib and loaded by a Streamlit inference application.
+
+The deployed workflow is:
+
+```text
+Recent SpO₂ + Heart Rate Inputs
+            ↓
+     Feature Engineering
+            ↓
+      11 Model Features
+            ↓
+Saved Gradient Boosting Model
+            ↓
+   5-Minute SpO₂ Forecast
+
+---
+## Key Finding
+
+A simple persistence forecast was difficult to outperform when SpO₂ remained stable.
+
+However, on unseen test patients, the tuned Gradient Boosting model showed greater value during periods of meaningful oxygen-saturation change.
+
+For moderate 5-minute changes, MAE decreased from **1.1466** with persistence to **1.0058** with Gradient Boosting.
+
+For large changes, MAE decreased from **5.9375** to **5.1202**, while RMSE decreased from **7.1681** to **6.6332**.
+
+This highlights the importance of evaluating physiological forecasting models across different change patterns rather than relying only on aggregate metrics.
+
+---
+
+## Limitations
+
+This project is an educational machine-learning study and is not a clinically validated prediction system.
+
+The model was developed and evaluated on a limited patient cohort. Performance may differ across other datasets, populations, devices, or clinical settings.
+
+Additional external validation, prospective evaluation, and clinical review would be required before considering any real-world medical application.
+
+This project is not intended for diagnosis, treatment, patient monitoring, or medical decision-making.
